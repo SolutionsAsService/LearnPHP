@@ -1,6 +1,7 @@
 <x-layout page="home">
     <section class="hero">
-        <div class="wrap">
+        <div class="wrap split">
+          <div class="hero-main">
             <h1>Learn PHP</h1>
             <p class="lede">The server-side language behind much of the web. Pick a line to start.</p>
             <div class="listing" role="group" aria-label="The six pages of this site, written as a PHP array">
@@ -20,6 +21,10 @@
                 @endforeach
                 <p class="ln"><span class="no" aria-hidden="true">8</span>];</p>
             </div>
+          </div>
+          <div class="run" aria-label="A whole program and what it printed">
+            <x-code :code="$sample['code']" :output="$sample['output']" />
+          </div>
         </div>
     </section>
 
@@ -28,7 +33,7 @@
             <h2>Welcome to Learn PHP</h2>
             <p>PHP is a popular server-side scripting language used for web development. It is powerful, flexible, and easy to learn. Explore the pages to understand more about PHP and how it can be useful for your web development projects.</p>
             <p>PHP originally stood for Personal Home Page. Today the name means "PHP: Hypertext Preprocessor". Rasmus Lerdorf created it in 1994.</p>
-            <x-code :code="$sample['code']" :output="$sample['output']" />
+            <div class="run-narrow"><x-code :code="$sample['code']" :output="$sample['output']" /></div>
         </div>
     </section>
 </x-layout>

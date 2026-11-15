@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ? $title.' | Learn PHP' : 'Learn PHP' }}</title>
     <meta name="description" content="A short, runnable introduction to PHP: features, syntax, benefits and examples.">
+    <meta name="theme-color" content="#1b1830">
     <link rel="stylesheet" href="{{ asset('styles.css') }}">
 </head>
 <body class="p-{{ $page }}">
